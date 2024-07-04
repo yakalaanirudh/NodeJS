@@ -1,0 +1,13 @@
+db.customer.deleteOne({name:"John"})    //Deletes first doc
+db.customer.deleteOne({})               //Delets first doc          if passes empty obj as filter
+
+db.customer.deleteMany({name:"John"})      //Deletes all that match  
+db.customer.deleteMany({})                  //Deletes all docs      if passes empty obj as filter
+
+
+//remove method is deprecated
+
+db.customer.remove({name:"John"},true)      //true deletes only one doc that first matches
+db.customer.remove({name:"John"},false)     //false deletes only all doc that matches
+db.customer.remove({name:"John"})           //no second argument deletes only all doc that matches
+db.customer.remove({})                      //Deletes all docs      if passes empty obj as filter

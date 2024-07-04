@@ -1,0 +1,15 @@
+//Doc max size 16MB
+//number has many types like 
+NumberInt   32 bits size
+NumberLong        64 bits size
+NumberDecimal       for decimals for high precision 
+mongoDB has ObjectId data type
+
+Since mongoDb is based on JS
+It stores all integers as 64 bit floating value
+Embedded docs is a document which is assigned to a field
+
+db.customer.insertOne({name:"John", isAdmin:true, age:34, dob:new Date(), createdOn:new Timestamp()})
+
+typeof db.customer.findOne().age    //number
+db.stats()      //Gives stats of database

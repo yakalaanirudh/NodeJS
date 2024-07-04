@@ -1,0 +1,16 @@
+show dbs //It shows all databasess in the mongoDB server with atleast 1 collection and 1 document
+db     //It shows the current database
+show collections    //displays Collections in the selected database
+//test db is default database
+
+use databasename        //It shifts to specific database we want to use
+If that database doesnt exist it will create that database
+
+db.collectionName.insertOne({test:123})
+db.testCollection.insertOne({test:123})
+//This creates a document {test:123} in the collection named testCollection
+//If that collection doesnt exist it will create that collectiona nd add that document
+
+db.test.find()      //Returns all documents in the test collection
+
+db.dropdatabase()   //Deletes the current database

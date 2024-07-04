@@ -1,0 +1,19 @@
+In JSON keys are in ""
+In JSON values can be any valid JS values types
+BSON stands for Binary JSON
+MongoDB uses BSON because it easier and faster to send and receive data in BSON
+BSON supports additional data types like ObjectId
+BSON have multiple number data types
+MongoDB converts JSON to BSON
+
+show collections            //shows collections in db
+db.customer.insertOne({name:"Mark", age:25, gender:"Male"})
+//The keys dont have to have "" as long as there isnt any white soace in it
+
+db.customer.find()      //Shows all documents in customer collection
+//Every document has a unique id which mongoDB adds implicitly
+//_id:ObjectId("615165asfgfbgbwsf315")
+
+db.customer.insertOne({_id:"jhasvdjasbc", name:"Marcus", age:25, gender:"Male"})
+//Here we are manually adding the id for the document
+//MongoDB wont allow multiple documents with same id

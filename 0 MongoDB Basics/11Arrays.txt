@@ -1,0 +1,34 @@
+[
+    {
+        name:"Mary",
+        age:25,
+        address:["London","UK"],
+        purchase:[
+            {name:"Samsung"},
+            {name:"Iphone"}
+        ]
+    },
+        {
+        name:"Emma",
+        age:25,
+        address:["London","UK"],
+        purchase:[
+            {name:"Samsung"},
+            {name:"Iphone"}
+        ]
+    },
+        {
+        name:"Millie",
+        age:25,
+        address:["London","UK"],
+        purchase:[
+            {name:"Samsung"},
+            {name:"Iphone"}
+        ]
+    }
+]
+
+
+
+db.customer.find({address:"London"})
+db.customer.find({"purchase.name":"Samsung"})

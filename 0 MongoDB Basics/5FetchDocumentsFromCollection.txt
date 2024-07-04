@@ -1,0 +1,14 @@
+db.customer.findOne()   //Returns first document it finds
+db.customer.findOne({name:"Steve"}) //Returns first document it finds with name steve
+
+db.customer.find()   //Find method finds all docs from collection
+db.customer.find({name:"Steve"})    //Returns all documents it finds with name steve
+
+//0 or false means dont return these fields in the output
+db.customer.find({name:"Steve"},{_id:false,gender:0})
+db.customer.findOne({name:"Steve"},{_id:false,gender:0})
+
+
+//Returns in a formatted way
+db.customer.find({name:"Steve"},{_id:false,gender:0}).pretty()
+It cant be used on findOne method

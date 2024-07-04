@@ -1,0 +1,15 @@
+db          //Returns the current database
+
+db.customer.insertOne({name:"John",age:25,gender:"Male"})   //adds taht document to customer
+
+
+db.createCollection("products")     //Creates collection named products
+
+db.createCollection("test",capped:true,autoIndex:true,size:71651,max:31)
+//Creates a capped collection named test with size 71651 bytes and maximum 31 documents
+//autoIndex true means it will automatically create an index of id field default is false
+//capped collection means when max size reached it will overwrite oldest entries
+
+db.collectionName.drop()
+db.test.drop()
+//To delete a collection

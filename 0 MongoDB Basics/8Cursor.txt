@@ -1,0 +1,16 @@
+db.customer.find()      //Find method returns a pointer(cursor) that points to the list of docs
+
+//Suppose there 23 docs, find returns only 20
+we ahve to type it for the next 3
+find returnd docs in batches, the batches are called cursor
+find method wont return all docs at once
+
+db.customer.find().toArray()    this requests for the next batch till all are returned
+//toArray asks mongoDB to return next cursor till all docs are returned
+
+foreach is another cursor method
+this forEach method requests for the next batch till all are returned
+//forEach asks mongoDB to return next cursor till all docs are returned
+db.customer.forEach(function(){print("customer name: "+cust.name)}) 
+
+pretty method can only be called on a cursor

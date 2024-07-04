@@ -1,0 +1,18 @@
+db.customer.insertOne({name:"John",age:25,gender:"male"})
+
+db.customer.insertMany([
+    {name:"John",age:25,gender:"male"},
+    {name:"Jim",age:25}
+    {name:"Jack",age:25,gender:"male"}
+])
+//We can multiple documents which can have different schema
+
+insert can be used as insertOne or insertMany
+It is deprecated
+db.customer.insert({name:"Mary",age:25,gender:"female"})
+
+db.customer.insert([
+    {name:"Millie",age:25,gender:"female"},
+    {name:"Kate",age:25}
+    {name:"Emma",age:25,gender:"female"}
+])

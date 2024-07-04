@@ -1,0 +1,9 @@
+db.customer.updateOne({name:"John"},{$set:{age:30,car:"BMW"}})
+//It updates the first doc found
+//We need to pass the updating values to $set key
+
+db.customer.updateOne({name:"Sarah"},{$set:{age:30}})
+//Doc doesnt have age but if we update it it will add the field
+
+db.customer.updateMany({name:"John"},{$set:{age:30,car:"BMW"}})
+//Updates all
